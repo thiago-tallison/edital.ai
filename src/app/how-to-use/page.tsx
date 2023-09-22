@@ -1,9 +1,9 @@
 export default function HowToUse() {
   return (
     <div>
-      <h1 className='mb-6 text-2xl'>Como usar</h1>
+      <h1 className='mb-6 mt-6 text-2xl'>Como usar</h1>
 
-      <ol className='list-inside space-y-6'>
+      <ol className='list-inside space-y-6 text-sm md:text-lg'>
         <li className='list-decimal'>
           Copie todas as disciplinas para o cargo desejado e cole-as no campo{' '}
           <strong>Disciplinas do Edital</strong>
