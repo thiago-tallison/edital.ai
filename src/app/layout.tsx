@@ -23,24 +23,26 @@ export default function RootLayout({
     <html lang='pt-br'>
       <body className={inter.className}>
         <div className='flex min-h-screen flex-col'>
-          <div className='flex items-center justify-between border-b px-6 py-3'>
-            <Link href='/'>
-              <h1 className='cursor-pointer select-none text-xl font-bold'>
-                edital.ai
-              </h1>
-            </Link>
+          <div className='flex items-center justify-center border-b px-6 py-3'>
+            <div className='flex flex-1 items-center justify-between md:max-w-5xl'>
+              <Link href='/'>
+                <h1 className='cursor-pointer select-none text-xl font-bold'>
+                  edital.ai
+                </h1>
+              </Link>
 
-            <MenuLink />
+              <MenuLink />
 
-            <div>
-              <Button variant='outline'>
-                <Github className='mr-2 h-4 w-4' />
-                Github
-              </Button>
+              <div>
+                <Button variant='outline'>
+                  <Github className='mr-2 h-4 w-4' />
+                  Github
+                </Button>
+              </div>
             </div>
           </div>
-          <div className='mx-auto mt-6 max-w-5xl'>
-            <div className='px-6'>{children}</div>
+          <div className='mx-10 md:mx-auto md:mt-6 md:max-w-5xl'>
+            {children}
           </div>
         </div>
       </body>
