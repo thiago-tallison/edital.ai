@@ -1,4 +1,4 @@
-import MenuLink from '@/components/menulink'
+import MenuLink from '@/components/menu-link'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
