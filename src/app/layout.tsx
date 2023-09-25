@@ -48,9 +48,11 @@ export default function RootLayout({
               </div>
             </div>
           </div>
-          <div className='mx-10 md:mx-auto md:mt-6 md:max-w-5xl'>
+
+          {/* MAIN */}
+          <main className='mx-10 flex-1 md:mx-auto md:mt-6 md:max-w-5xl'>
             {children}
-          </div>
+          </main>
         </div>
       </body>
     </html>
