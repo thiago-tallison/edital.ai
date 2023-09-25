@@ -9,10 +9,16 @@ import {
 } from '@/components/ui/navigation-menu'
 import Link from 'next/link'
 
-export default function MenuLink() {
+type MenuLinkProps = {
+  orientation?: 'horizontal' | 'vertical'
+}
+
+export default function MenuLink({ orientation }: MenuLinkProps) {
   return (
     <NavigationMenu>
-      <NavigationMenuList>
+      <NavigationMenuList
+        className={orientation === 'vertical' ? 'flex flex-col' : ''}
+      >
         <NavigationMenuItem>
           <Link href='/how-to-use' legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>

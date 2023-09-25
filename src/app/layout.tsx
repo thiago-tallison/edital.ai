@@ -3,8 +3,9 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
-import { Github } from 'lucide-react'
+import { Github, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { DialogComponent } from '@/components/dialog'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,6 +25,10 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className='flex min-h-screen flex-col'>
           <div className='flex items-center justify-center border-b px-6 py-3'>
+            <div className='mr-3 block sm:hidden'>
+              <DialogComponent />
+            </div>
+
             <div className='flex flex-1 items-center justify-between md:max-w-5xl'>
               <Link href='/'>
                 <h1 className='cursor-pointer select-none text-xl font-bold'>
@@ -31,7 +36,9 @@ export default function RootLayout({
                 </h1>
               </Link>
 
-              <MenuLink />
+              <div className='hidden sm:block'>
+                <MenuLink />
+              </div>
 
               <div>
                 <Button variant='outline'>
