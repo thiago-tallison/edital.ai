@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { DialogComponent } from './dialog'
 import MenuLink from './menu-link'
-import { Button } from './ui/button'
+import { buttonVariants } from './ui/button'
 import { Github } from 'lucide-react'
 
 export default function Header() {
@@ -23,10 +23,10 @@ export default function Header() {
         </div>
 
         <div>
-          <Button variant='outline'>
+          <Link href='#' className={buttonVariants({ variant: 'outline' })}>
             <Github className='mr-2 h-4 w-4' />
             Github
-          </Button>
+          </Link>
         </div>
       </div>
     </header>
