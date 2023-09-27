@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { Github, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { DialogComponent } from '@/components/dialog'
+import Header from '@/components/header'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,32 +25,8 @@ export default function RootLayout({
     <html lang='pt-br'>
       <body className={inter.className}>
         <div className='flex min-h-screen flex-col'>
-          <header className='flex items-center justify-center border-b px-6 py-3'>
-            <div className='mr-3 block sm:hidden'>
-              <DialogComponent />
-            </div>
+          <Header />
 
-            <div className='flex flex-1 items-center justify-between md:max-w-5xl'>
-              <Link href='/'>
-                <h1 className='cursor-pointer select-none text-xl font-bold'>
-                  edital.ai
-                </h1>
-              </Link>
-
-              <div className='hidden sm:block'>
-                <MenuLink />
-              </div>
-
-              <div>
-                <Button variant='outline'>
-                  <Github className='mr-2 h-4 w-4' />
-                  Github
-                </Button>
-              </div>
-            </div>
-          </header>
-
-          {/* MAIN */}
           <main className='flex w-full max-w-5xl flex-1 justify-between self-center px-4 py-4 sm:px-10'>
             {children}
           </main>
