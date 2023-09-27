@@ -23,7 +23,11 @@ export default function Header() {
         </div>
 
         <div>
-          <Link href='#' className={buttonVariants({ variant: 'outline' })}>
+          <Link
+            target='_blank'
+            href='https://github.com/thiago-tallison/edital.ai'
+            className={buttonVariants({ variant: 'outline' })}
+          >
             <Github className='mr-2 h-4 w-4' />
             Github
           </Link>
