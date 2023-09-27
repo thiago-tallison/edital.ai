@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang='pt-br'>
       <body className={inter.className}>
         <div className='flex min-h-screen flex-col'>
-          <div className='flex items-center justify-center border-b px-6 py-3'>
+          <header className='flex items-center justify-center border-b px-6 py-3'>
             <div className='mr-3 block sm:hidden'>
               <DialogComponent />
             </div>
@@ -47,10 +47,10 @@ export default function RootLayout({
                 </Button>
               </div>
             </div>
-          </div>
+          </header>
 
           {/* MAIN */}
-          <main className='mx-10 flex-1 md:mx-auto md:mt-6 md:max-w-5xl'>
+          <main className='flex w-full max-w-5xl flex-1 justify-between self-center px-4 py-4 sm:px-10'>
             {children}
           </main>
         </div>
